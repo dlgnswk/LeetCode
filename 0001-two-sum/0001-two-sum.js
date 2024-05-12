@@ -13,6 +13,6 @@ const twoSum = function(nums, target) {
         return [map.get(unknownNumber), i];
     }
  
-      map.set(nums[i], i)
+    map.set(nums[i], i);
   }
 };
