@@ -5,9 +5,10 @@
  */
 const twoSum = function(nums, target) {
   for (let i = 0; i < nums.length; i++) {
-    if(nums.includes(target - nums[i]) && nums.indexOf(target - nums[i]) !== nums.lastIndexOf(nums[i])) {
-      console.log(nums[i])
-      return [i, nums.indexOf(target - nums[i], i + 1)]
+    const missingNumber = target - nums[i];
+
+    if (nums.includes(missingNumber) && nums.indexOf(missingNumber) !== nums.lastIndexOf(nums[i])) {
+      return [i, nums.indexOf(missingNumber, i + 1)];
     }
   }
 };
