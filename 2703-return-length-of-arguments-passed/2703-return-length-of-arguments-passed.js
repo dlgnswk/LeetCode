@@ -3,7 +3,7 @@
  * @return {number}
  */
 const argumentsLength = function(...args) {
-  return args.length;
+  return [...args].length;
 };
 
 /**
