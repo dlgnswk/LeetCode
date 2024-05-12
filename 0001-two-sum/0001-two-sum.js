@@ -4,11 +4,15 @@
  * @return {number[]}
  */
 const twoSum = function(nums, target) {
-  for (let i = 0; i < nums.length; i++) {
-    const missingNumber = target - nums[i];
+  const map = new Map();
 
-    if (nums.includes(missingNumber) && nums.indexOf(missingNumber) !== nums.lastIndexOf(nums[i])) {
-      return [i, nums.indexOf(missingNumber, i + 1)];
+  for (let i = 0; i < nums.length; i++) {
+    const unknownNumber = target - nums[i];
+
+    if (map.has(unknownNumber)) {
+        return [map.get(unknownNumber), i];
     }
+ 
+      map.set(nums[i], i)
   }
 };
