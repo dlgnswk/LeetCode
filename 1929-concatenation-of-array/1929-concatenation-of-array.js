@@ -4,7 +4,7 @@
  */
 var getConcatenation = function(nums) {
   const len = nums.length;
-  const result = new Array();
+  const result = [];
   
   for (let i = 0; i < len; i++) {
     result[i] = nums[i];
