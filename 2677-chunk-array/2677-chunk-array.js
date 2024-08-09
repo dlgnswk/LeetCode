@@ -17,26 +17,28 @@ var chunk = function(arr, size) {
     let count = 0;
     const result = [];
     
-  if(arr.length > 0) {
+    if(arr.length > 0) {
   
-    for (const item of arr) {
-        
-        if (size > count) {
-            unit.push(item);
-          
-            count++;
-        } else {
-            result.push(unit);
-            
-            unit = [];
-            unit.push(item);
-            
-            count = 1;
+        for (const item of arr) {
+
+            if (size > count) {
+                unit.push(item);
+
+                count++;
+            } else {
+                result.push(unit);
+
+                unit = [];
+                unit.push(item);
+
+                count = 1;
+            }
         }
+
+        result.push(unit);
+
+        return result;
     }
-  result.push(unit);
-  
-  return result;
-    }
-  return [];
+
+    return [];
 };
