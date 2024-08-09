@@ -3,7 +3,7 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    const compareList = [];
+    const compareList = []; // 선언 및 초기화
     
     nums.forEach((num) => {
         const numIndex = compareList.indexOf(num);
