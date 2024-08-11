@@ -11,7 +11,9 @@ const twoSum = function(nums, target) {
     const numList = [...nums];
     const [num] = numList.splice(i, 1);
     
-    if (numList.indexOf(target - num) !== -1) {
+    if (numList.indexOf(target - num) === -1) {
+      continue;
+    } else {
       return [i, nums.lastIndexOf(target - num)];
     }
   }
