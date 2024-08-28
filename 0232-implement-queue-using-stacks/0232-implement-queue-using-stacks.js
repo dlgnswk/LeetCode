@@ -16,7 +16,6 @@ MyQueue.prototype.push = function(x) {
  * @return {number}
  */
 MyQueue.prototype.pop = function() {
-  console.log(this.stack1)
   return this.stack1.shift();
 };
 
